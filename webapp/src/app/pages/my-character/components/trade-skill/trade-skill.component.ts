@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { Attribute } from '@nw-company-tool/model';
+import {Attribute} from '@nw-company-tool/model';
 
 @Component({
   selector: 'app-trade-skill',

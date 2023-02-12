@@ -1,10 +1,10 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Observable, of } from 'rxjs';
-import { FormControl, Validators } from '@angular/forms';
-import { debounceTime, map, mergeMap } from 'rxjs/operators';
-import { Attribute, Character } from '@nw-company-tool/model';
-import { CharacterService } from '../../../../services/character/character.service';
-import { SnackbarService } from '../../../../services/snackbar/snackbar.service';
+import {Component, Input, OnInit} from '@angular/core';
+import {Observable, of} from 'rxjs';
+import {FormControl, Validators} from '@angular/forms';
+import {debounceTime, map, mergeMap} from 'rxjs/operators';
+import {Attribute, Character} from '@nw-company-tool/model';
+import {CharacterService} from '../../../../services/character/character.service';
+import {SnackbarService} from '../../../../services/snackbar/snackbar.service';
 
 @Component({
   selector: 'app-my-character-trade-skills',
@@ -36,6 +36,7 @@ export class CharacterTradeSkillsComponent implements OnInit {
   fishing = new FormControl(0, [Validators.max(200), Validators.min(0)]);
   harvesting = new FormControl(0, [Validators.max(200), Validators.min(0)]);
   trackingAndSkinning = new FormControl(0, [Validators.max(200), Validators.min(0)]);
+  music = new FormControl(0, [Validators.max(200), Validators.min(0)]);
 
   constructor(private characterService: CharacterService, private snackbarService: SnackbarService) {}
 
@@ -57,6 +58,7 @@ export class CharacterTradeSkillsComponent implements OnInit {
     this.setupForm(this.fishing, Attribute.FISHING);
     this.setupForm(this.harvesting, Attribute.HARVESTING);
     this.setupForm(this.trackingAndSkinning, Attribute.TRACKING_AND_SKINNING);
+    this.setupForm(this.music, Attribute.MUSIC);
   }
 
   private setupForm(form: FormControl, attribute: Attribute) {

@@ -37,7 +37,8 @@
     "MINING": "Mining",
     "FISHING": "Fishing",
     "HARVESTING": "Harvesting",
-    "TRACKING_AND_SKINNING": "Tracking & Skinning"
+    "TRACKING_AND_SKINNING": "Tracking & Skinning",
+    "MUSIC": "Music"
   },
   "ATTRIBUTES_GROUP": {
     "BASE": "Base",

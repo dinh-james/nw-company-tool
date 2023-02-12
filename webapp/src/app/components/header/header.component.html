@@ -12,6 +12,7 @@
       <span>{{item.label}}</span>
     </button>
   </mat-menu>
+  <span class="header-logo"><img src="assets/images/recurrence.png" /></span>
   <span class="header-headline" (click)="home()">{{headline() | async}}</span>
   <span class="header-spacer"></span>
   <div *ngIf="isLoggedIn" class='flex flex-vertical-center'>

@@ -1,10 +1,10 @@
 <div class="content flex flex-center">
   <ng-container *ngFor="let item of getNavigationItems() | async">
-    <div [routerLink]="item.routerLink" class='home-card-container'>
-      <mat-card class="home-card">
+    <div [routerLink]="!item.disabled ? [item.routerLink] : []" class='home-card-container'>
+      <mat-card class="home-card {{ item.disabled ? 'p-disabled' : '' }}">
         <div class="flex flex-column flex-vertical-center">
           <div>
-            <mat-icon aria-hidden="false" class="home-icon">{{item.icon}}</mat-icon>
+            <img aria-hidden="false" class="home-icon" src="assets/images/icons/nav/{{item.icon}}" alt="{{item.label}}" />
           </div>
           <div class="home-label">
             <span>{{item.label}}</span>

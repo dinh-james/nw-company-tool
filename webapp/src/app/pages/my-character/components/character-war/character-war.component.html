@@ -1,0 +1,105 @@
+<div class="content flex flex-column" style="margin-top: 10px;">
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>Equip Load</mat-label>
+            <mat-select [formControl]="equipLoad">
+                <mat-option value="LIGHT">Light</mat-option>
+                <mat-option value="MEDIUM">Medium</mat-option>
+                <mat-option value="HEAVY">Heavy</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>Build</mat-label>
+            <mat-select [formControl]="role">
+                <mat-option value="HEALER">Healer</mat-option>
+                <mat-option value="BRUISER">Bruiser</mat-option>
+                <mat-option value="SUPPORT">Support</mat-option>
+                <mat-option value="DEX">Dex</mat-option>
+                <mat-option value="ASSASSIN">Assassin</mat-option>
+                <mat-option value="TANK">Tank</mat-option>
+                <mat-option value="MAGE">Mage</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>Primary Weapon</mat-label>
+            <mat-select [formControl]="primaryWeapon">
+                <mat-optgroup label="One Handed">
+                    <mat-option value="SWORD_AND_SHIELD">Sword & Shield</mat-option>
+                    <mat-option value="RAPIER">Rapier</mat-option>
+                    <mat-option value="HATCHET">Hatchet</mat-option>
+                </mat-optgroup>
+                <mat-optgroup label="Two Handed">
+                    <mat-option value="SPEAR">Spear</mat-option>
+                    <mat-option value="GREATAXE">Greataxe</mat-option>
+                    <mat-option value="WARHAMMER">Warhammer</mat-option>
+                    <mat-option value="GREATSWORD">Greatsword</mat-option>
+                </mat-optgroup>
+                <mat-optgroup label="Ranged">
+                    <mat-option value="BOW">Bow</mat-option>
+                    <mat-option value="MUSKET">Musket</mat-option>
+                    <mat-option value="BLUNDERBUSS">Blunderbuss</mat-option>
+                </mat-optgroup>
+                <mat-optgroup label="Magic">
+                    <mat-option value="FIRESTAFF">Fire Staff</mat-option>
+                    <mat-option value="LIFESTAFF">Life Staff</mat-option>
+                    <mat-option value="ICE_GAUNTLET">Ice Gauntlet</mat-option>
+                    <mat-option value="VOID_GAUNTLET">Void Gauntlet</mat-option>
+                </mat-optgroup>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>Secondary Weapon</mat-label>
+            <mat-select [formControl]="secondaryWeapon">
+                <mat-optgroup label="One Handed">
+                    <mat-option value="SWORD_AND_SHIELD">Sword & Shield</mat-option>
+                    <mat-option value="RAPIER">Rapier</mat-option>
+                    <mat-option value="HATCHET">Hatchet</mat-option>
+                </mat-optgroup>
+                <mat-optgroup label="Two Handed">
+                    <mat-option value="SPEAR">Spear</mat-option>
+                    <mat-option value="GREATAXE">Greataxe</mat-option>
+                    <mat-option value="WARHAMMER">Warhammer</mat-option>
+                    <mat-option value="GREATSWORD">Greatsword</mat-option>
+                </mat-optgroup>
+                <mat-optgroup label="Ranged">
+                    <mat-option value="BOW">Bow</mat-option>
+                    <mat-option value="MUSKET">Musket</mat-option>
+                    <mat-option value="BLUNDERBUSS">Blunderbuss</mat-option>
+                </mat-optgroup>
+                <mat-optgroup label="Magic">
+                    <mat-option value="FIRESTAFF">Fire Staff</mat-option>
+                    <mat-option value="LIFESTAFF">Life Staff</mat-option>
+                    <mat-option value="ICE_GAUNTLET">Ice Gauntlet</mat-option>
+                    <mat-option value="VOID_GAUNTLET">Void Gauntlet</mat-option>
+                </mat-optgroup>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>600+ GS</mat-label>
+            <mat-select [formControl]="gearScoreAbove600" [value]="gearScore.value > 600 ? 'YES' : 'NO'" disabled>
+                <mat-option value="YES">Yes</mat-option>
+                <mat-option value="NO">No</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field appearance="fill">
+            <mat-label>Interested in War</mat-label>
+            <mat-select [formControl]="interestedInWar">
+                <mat-option value="YES">Yes</mat-option>
+                <mat-option value="NO">No</mat-option>
+            </mat-select>
+        </mat-form-field>
+    </div>
+    <div>
+        <button mat-stroked-button (click)="save()" style="float: right;">SAVE</button>
+    </div>
+</div>

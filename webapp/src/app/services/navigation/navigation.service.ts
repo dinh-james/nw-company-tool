@@ -8,6 +8,7 @@ export type NavigationItem = {
   label: string;
   routerLink: string;
   icon: string;
+  disabled: boolean;
 };
 
 @Injectable({ providedIn: 'root' })
@@ -16,25 +17,47 @@ export class NavigationService {
     {
       label: 'MY CHARACTER',
       routerLink: 'my-character',
-      icon: 'account_circle'
+      icon: 'icon_character.png',
+      disabled: false
     },
     {
       label: 'COMPANY',
       routerLink: 'company',
-      icon: 'group'
+      icon: 'icon_company.png',
+      disabled: false
     },
     {
       label: 'EXPEDITION',
       routerLink: 'expedition',
-      icon: 'landscape'
+      icon: 'icon_expedition.png',
+      disabled: false
+    },
+    {
+      label: 'WAR',
+      routerLink: 'war',
+      icon: 'icon_war.png',
+      disabled: true
+    },
+    {
+      label: 'INVASION',
+      routerLink: 'invasion',
+      icon: 'icon_invasion.png',
+      disabled: true
+    },
+    {
+      label: 'OUTPOST RUSH',
+      routerLink: 'opr',
+      icon: 'icon_outpostrush.png',
+      disabled: true
     }
   ];
 
   private adminNavigation: NavigationItem[] = [
     {
-      label: 'ADMINISTRATION',
+      label: 'ADMIN',
       routerLink: 'admin',
-      icon: 'admin_panel_settings'
+      icon: 'icon_ranks.png',
+      disabled: false
     }
   ];
 

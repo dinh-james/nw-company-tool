@@ -4,17 +4,17 @@ import { ClientConfig, ServerConfig } from '@nw-company-tool/model';
 
 const defaultConfig: ServerConfig = {
   DISCORD: {
-    CLIENT_ID: 'ID',
-    CLIENT_SECRET: 'SECRET',
+    CLIENT_ID: '1073897712128380951',
+    CLIENT_SECRET: 'QOE5p3iwPCuCwJqpkVfPqxcLJ1kc_H_j',
   },
-  BASE_URL: 'http://localhost:8080',
+  BASE_URL: 'http://localhost:4200',
   TOKEN_SECRET: 'Test',
   PORT: 8080,
   DATABASE: 'database.db',
   WEBAPP: {
     COMPANY: {
-      NAME: 'MY COMPANY',
-      SERVER: 'MY SERVER',
+      NAME: 'Recurrence',
+      SERVER: 'Delos',
     },
   },
 };

@@ -34,26 +34,21 @@
     <ng-container matColumnDef='participants'>
       <mat-header-cell *matHeaderCellDef> Participants</mat-header-cell>
       <mat-cell *matCellDef='let row'>
-        <div class='flex'>
-          <button *ngIf='getTank(row.participants); let slot' mat-icon-button color='{{getSlotColor(slot) | async}}'
-                  matTooltip='{{getSlotTooltip(slot) | async}}' (click)='slotClick(slot, row)'>
-            <mat-icon>{{getIcon(slot.role)}}</mat-icon>
+        <div class='flex' style="gap: 5px;">
+          <button *ngIf='getTank(row.participants); let slot' mat-icon-button matTooltip='{{getSlotTooltip(slot) | async}}' (click)='slotClick(slot, row)' style="{{getSlotColor(slot) | async}}">
+            <img src="assets/images/icons/roles/{{slot.role | lowercase}}.png" style="max-width: 30px;" />
           </button>
-          <button *ngIf='getDamage1(row.participants); let slot' mat-icon-button color='{{getSlotColor(slot) | async}}'
-                  matTooltip='{{getSlotTooltip(slot) | async}}' (click)='slotClick(slot, row)'>
-            <mat-icon>{{getIcon(slot.role)}}</mat-icon>
+          <button *ngIf='getDamage1(row.participants); let slot' mat-icon-button matTooltip='{{getSlotTooltip(slot) | async}}' (click)='slotClick(slot, row)' style="{{getSlotColor(slot) | async}}">
+            <img src="assets/images/icons/roles/{{slot.role | lowercase}}.png" style="max-width: 30px;" />
           </button>
-          <button *ngIf='getDamage2(row.participants); let slot' mat-icon-button color='{{getSlotColor(slot) | async}}'
-                  matTooltip='{{getSlotTooltip(slot) | async}}' (click)='slotClick(slot, row)'>
-            <mat-icon>{{getIcon(slot.role)}}</mat-icon>
+          <button *ngIf='getDamage2(row.participants); let slot' mat-icon-button matTooltip='{{getSlotTooltip(slot) | async}}' (click)='slotClick(slot, row)' style="{{getSlotColor(slot) | async}}">
+            <img src="assets/images/icons/roles/{{slot.role | lowercase}}.png" style="max-width: 30px;" />
           </button>
-          <button *ngIf='getDamage3(row.participants); let slot' mat-icon-button color='{{getSlotColor(slot) | async}}'
-                  matTooltip='{{getSlotTooltip(slot) | async}}' (click)='slotClick(slot, row)'>
-            <mat-icon>{{getIcon(slot.role)}}</mat-icon>
+          <button *ngIf='getDamage3(row.participants); let slot' mat-icon-button matTooltip='{{getSlotTooltip(slot) | async}}' (click)='slotClick(slot, row)' style="{{getSlotColor(slot) | async}}">
+            <img src="assets/images/icons/roles/{{slot.role | lowercase}}.png" style="max-width: 30px;" />
           </button>
-          <button *ngIf='getHeal(row.participants); let slot' mat-icon-button color='{{getSlotColor(slot) | async}}'
-                  matTooltip='{{getSlotTooltip(slot) | async}}' (click)='slotClick(slot, row)'>
-            <mat-icon>{{getIcon(slot.role)}}</mat-icon>
+          <button *ngIf='getHeal(row.participants); let slot' mat-icon-button matTooltip='{{getSlotTooltip(slot) | async}}' (click)='slotClick(slot, row)' style="{{getSlotColor(slot) | async}}">
+            <img src="assets/images/icons/roles/{{slot.role | lowercase}}.png" style="max-width: 30px;" />
           </button>
         </div>
       </mat-cell>

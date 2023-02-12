@@ -7,7 +7,7 @@ import { MatDialog } from '@angular/material/dialog';
 import {
   Attribute,
   ATTRIBUTES,
-  BASE,
+  BASE, CASUAL_SKILLS,
   Character,
   GATHERING_SKILLS,
   REFINING_SKILLS,
@@ -42,7 +42,8 @@ export class CharactersTableComponent implements OnInit, AfterViewInit {
     { attributes: BASE.concat(WEAPON_SKILLS_MAGIC), label: 'ATTRIBUTES_GROUP.WEAPON_SKILLS_MAGIC' },
     { attributes: TRADE_SKILLS, label: 'ATTRIBUTES_GROUP.TRADE_SKILLS' },
     { attributes: REFINING_SKILLS, label: 'ATTRIBUTES_GROUP.REFINING_SKILLS' },
-    { attributes: GATHERING_SKILLS, label: 'ATTRIBUTES_GROUP.GATHERING_SKILLS' }
+    { attributes: GATHERING_SKILLS, label: 'ATTRIBUTES_GROUP.GATHERING_SKILLS' },
+    { attributes: CASUAL_SKILLS, label: 'ATTRIBUTES_GROUP.CASUAL_SKILLS' },
   ];
 
   attributeGroupFilter = new FormControl();

@@ -30,7 +30,7 @@ export type Slot = {
   styleUrls: ['./expedition-table.component.css']
 })
 export class ExpeditionTableComponent implements OnInit, AfterViewInit {
-  displayedColumns: string[] = ['planned', 'name', 'owner', 'tuning-orb', 'participants', 'delete'];
+  displayedColumns: string[] = ['planned', 'name', 'owner', 'participants', 'delete'];
   dataSource = new MatTableDataSource<Expedition>();
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -115,11 +115,11 @@ export class ExpeditionTableComponent implements OnInit, AfterViewInit {
   getIcon(role: Role): string {
     switch (role) {
       case Role.TANK:
-        return 'shield';
+        return 'tank';
       case Role.DAMAGE:
-        return 'sports_martial_arts';
+        return 'dps';
       case Role.HEAL:
-        return 'healing';
+        return 'heal';
       default:
         return 'question_mark';
     }
@@ -166,9 +166,9 @@ export class ExpeditionTableComponent implements OnInit, AfterViewInit {
   getSlotColor(slot: Slot): Observable<string> {
     return this.userService.getUser$().pipe(
       map((user) => {
-        if (slot.participant?.userId === user.id) return 'primary';
-        if (!slot.open) return '';
-        return 'accent';
+        if (slot.participant?.userId === user.id) return 'opacity: 1';
+        if (!slot.open) return 'opacity: 0.3';
+        return 'opacity: 0.3';
       })
     );
   }

@@ -18,6 +18,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { MatTabsModule } from '@angular/material/tabs';
 import { CommonModule } from '@angular/common';
+import {CharacterWarComponent} from "./components/character-war/character-war.component";
+import {MatSelectModule} from "@angular/material/select";
 
 @NgModule({
   imports: [
@@ -31,7 +33,8 @@ import { CommonModule } from '@angular/common';
     MatProgressBarModule,
     MatIconModule,
     MatCardModule,
-    MatTabsModule
+    MatTabsModule,
+    MatSelectModule
   ],
   declarations: [
     MyCharacterComponent,
@@ -41,7 +44,8 @@ import { CommonModule } from '@angular/common';
     CharacterWeaponMasteryComponent,
     TradeSkillComponent,
     WeaponMasteryComponent,
-    AttributeComponent
+    AttributeComponent,
+    CharacterWarComponent
   ],
   providers: [],
   exports: []

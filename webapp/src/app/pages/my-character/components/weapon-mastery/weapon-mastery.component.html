@@ -1,4 +1,5 @@
 <div class="flex flex-vertical-center flex-column weapon-mastery-container">
+    <img src="assets/images/icons/weapons/{{attribute | lowercase}}.png"/>
     <div>{{'ATTRIBUTES.' + attribute | translate}}</div>
     <mat-progress-bar mode="determinate" [value]="value / 20 * 100"></mat-progress-bar>
     <div class="weapon-mastery-value">

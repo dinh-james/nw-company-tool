@@ -1,24 +1,49 @@
 <div>
-    <mat-card class="content card">
+    <mat-card class="content">
         <mat-tab-group animationDuration="500ms">
-            <mat-tab label="BASIC">
-                <div class="content">
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <img src="assets/images/icons/subnav/basic.png" style="max-width: 40px;" />
+                    <p>BASIC</p>
+                </ng-template>
+                <div class="content pad-top">
                     <app-my-character-basic [character$]="character"></app-my-character-basic>
                 </div>
             </mat-tab>
-            <mat-tab label="ATTRIBUTES">
-                <div class="content">
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <img src="assets/images/icons/subnav/attributes.png" style="max-width: 40px;" />
+                    <p>ATTRIBUTES</p>
+                </ng-template>
+                <div class="content pad-top">
                     <app-my-character-attributes [character$]="character"></app-my-character-attributes>
                 </div>
             </mat-tab>
-            <mat-tab label="WEAPON MASTERY">
-                <div class="content">
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <img src="assets/images/icons/subnav/weapon_mastery.png" style="max-width: 40px;" />
+                    <p>WEAPON MASTERY</p>
+                </ng-template>
+                <div class="content pad-top">
                     <app-my-character-weapon-mastery [character$]="character"></app-my-character-weapon-mastery>
                 </div>
             </mat-tab>
-            <mat-tab label="TRADE SKILLS">
-                <div class="content">
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <img src="assets/images/icons/subnav/trade_skills.png" style="max-width: 40px;" />
+                    <p>TRADE SKILLS</p>
+                </ng-template>
+                <div class="content pad-top">
                     <app-my-character-trade-skills [character$]="character"></app-my-character-trade-skills>
+                </div>
+            </mat-tab>
+            <mat-tab>
+                <ng-template mat-tab-label>
+                    <img src="assets/images/icons/subnav/war_roster.png" style="max-width: 40px;" />
+                    <p>WAR ROSTER</p>
+                </ng-template>
+                <div class="content pad-top">
+                    <app-my-character-war [character$]="character"></app-my-character-war>
                 </div>
             </mat-tab>
         </mat-tab-group>
