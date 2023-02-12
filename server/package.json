@@ -40,6 +40,7 @@
     "@nestjs/event-emitter": "^1.0.0",
     "@nestjs/platform-express": "^8.0.0",
     "@nestjs/serve-static": "^2.2.2",
+    "@nw-company-tool/core": "file:..",
     "@prisma/client": "^3.5.0",
     "cache-manager": "^3.6.0",
     "class-transformer": "^0.4.0",
